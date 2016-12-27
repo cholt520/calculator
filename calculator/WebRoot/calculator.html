@@ -1,0 +1,45 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.9/angular.min.js"></script>
+<script src="calculator.js"></script>
+<link rel="stylesheet" type="text/css" href="calculator.css" media="screen" />
+</head>
+  <body ng-app="calculatorApp">
+  <form class="calc" ng-controller="calculatorCtrl">
+    <p class="calc-display">
+      <input type="text" name="output" id="res" value="{{output}}" class="calc-display-input" readonly>
+    </p>
+    <p class="operators">
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='divide()' >/</button>
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='multiply()' >x</button>
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='subtract()' >-</button>
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='add()' >+</button>      
+    </p>
+    
+     <p class="operators">
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='square()' >^</button>
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='sin()' >sin</button>
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='cos()' >cos</button>
+      <button type="button" class="calc-button calc-button-black calc-button-big" ng-click='tan()' >tan</button>      
+    </p>
+    
+    <p class="calc-row">
+      <button type="button" class="calc-button" ng-click="updateOutput(0)">0</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(1)">1</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(2)">2</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(3)">3</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(4)">4</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(5)">5</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(6)">6</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(7)">7</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(8)">8</button>
+      <button type="button" class="calc-button" ng-click="updateOutput(9)">9</button>
+      
+      <button type="button" class="calc-button" ng-click="updateOutput('.')">.</button>
+      <button type="button" class="calc-button" ng-click='output = 0'>Clear</button>
+      
+    </p>
+    <p class="calc-row"><button type="button" class="calc-button calc-button-result-black calc-button-big" ng-click="calculate()">=</button></p>
+  </form>
+  </body>
+  </html>
